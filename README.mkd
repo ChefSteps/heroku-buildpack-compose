@@ -1,4 +1,20 @@
 
+ChefSteps!!
+=========================
+If you are using this at ChefSteps for a Node project, you'll probably want a .buildpacks file with these lines:
+```
+https://github.com/ChefSteps/heroku-buildpack-ssh.git
+https://github.com/heroku/heroku-buildpack-nodejs
+```
+
+And you need to set the SSH environment variable for your app to a key that has access to the repos you want to use. 
+
+Then you need to turn on this buildpack with a command like:
+
+```
+% heroku buildpacks:set https://github.com/ChefSteps/heroku-buildpack-compose.git --app my-app-name
+```
+
 Heroku buildpack: Compose
 =========================
 
